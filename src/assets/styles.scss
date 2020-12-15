@@ -1,0 +1,54 @@
+$pink: #e12160;
+$white: #e1e2e3;
+$black: #1f1e1d;
+
+$bgGradient: linear-gradient(to right, $white, $pink);
+$footerGradient: linear-gradient(to right, $pink, $black);
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: $bgGradient;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// .App {}
+
+.component {
+  padding: 1rem;
+}
+
+.image {
+  margin-top: 1rem;
+  &__top {
+    object-fit: fill;
+    width: 100%;
+  }
+}
+
+.label {
+  &__header {
+    text-align: center;
+    color: darkred;
+  }
+}
+
+.background {
+  &__footer {
+    background: $footerGradient;
+    color: $white;
+  }
+}
+
+.position {
+  &__footer {
+    bottom: 0 !important;
+    width: 100%;
+  }
+}
