@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Bio = () => (
-  <div>
+  <div className="position__bio">
+    <h3>Hello my name is Kasia</h3>
     <div>
-      <h3>Hello my name is Kasia</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Sed viverra tellus

@@ -9,8 +9,8 @@ const App = () => (
   <div>
     <Header />
     <TopNavbar />
-    <AboutMe />
-    <Contact />
+    {/* <AboutMe id="home" />
+    <Contact id="contact" /> */}
   </div>
 );
 

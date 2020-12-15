@@ -1,5 +1,7 @@
 import React from 'react';
 import { Tab, Tabs } from '@material-ui/core';
+import AboutMe from './../../containers/Home/index';
+import Contact from './../../containers/Contact/index';
 
 const TopNavbar = () => {
   const [value, setValue] = React.useState(1);
@@ -7,6 +9,7 @@ const TopNavbar = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   return (
     <div>
       <Tabs
@@ -16,10 +19,12 @@ const TopNavbar = () => {
         textColor="primary"
         centered
       >
-        <Tab label="offer" disabled />
-        <Tab label="home" />
-        <Tab label="contact" />
+        <Tab label="offer" href="offer" disabled />
+        <Tab label="home" href="home" />
+        <Tab label="contact" href="contact" />
       </Tabs>
+      <AboutMe id="home" />
+      <Contact id="contact" />
     </div>
   );
 };

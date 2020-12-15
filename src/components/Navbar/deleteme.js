@@ -1,28 +1,30 @@
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import { Button } from '@material-ui/core';
+import AboutMe from './../../containers/Home/index';
+import Contact from './../../containers/Contact/index';
 
-export default function CenteredTabs() {
-  const [value, setValue] = React.useState(0);
+const TopNavbar = () => {
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <Paper>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        indicatorColor="primary"
-        textColor="primary"
-        centered
-      >
-        <Tab label="Item One" />
-        <Tab label="Item Two" />
-        <Tab label="Item Three" />
-      </Tabs>
-    </Paper>
+    <div>
+      <div>
+        <Button href="#">offer</Button>
+        <Button href="#home">home</Button>
+        <Button href="#contact">contact</Button>
+      </div>
+      <div id="home">
+        <AboutMe />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
+    </div>
   );
-}
+};
+
+export default TopNavbar;
