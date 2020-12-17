@@ -1,30 +1,43 @@
-import React from 'react';
-import { Button } from '@material-ui/core';
-import AboutMe from './../../containers/Home/index';
-import Contact from './../../containers/Contact/index';
+import { useRef, useLayoutEffect } from 'react';
 
-const TopNavbar = () => {
-  const [value, setValue] = React.useState(1);
+const isBrowser = typeof window !== `undefined`;
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+function getScrollPosition({ element, useWindow }) {
+  if (!isBrowser) return { x: 0, y: 0 };
+
+  const target = element ? element.current : document.body;
+  const position = target.getBoundingClientRect();
+
+  return useWindow
+    ? { x: window.scrollX, y: window.scrollY }
+    : { x: position.left, y: position.top };
+}
+
+export function useScrollPosition1(effect, deps, element, useWindow, wait) {
+  const position = useRef(getScrollPosition({ useWindow }));
+
+  let throttleTimeout = null;
+
+  const callBack = () => {
+    const currPos = getScrollPosition({ element, useWindow });
+    effect({ prevPos: position.current, currPos });
+    position.current = currPos;
+    throttleTimeout = null;
   };
 
-  return (
-    <div>
-      <div>
-        <Button href="#">offer</Button>
-        <Button href="#home">home</Button>
-        <Button href="#contact">contact</Button>
-      </div>
-      <div id="home">
-        <AboutMe />
-      </div>
-      <div id="contact">
-        <Contact />
-      </div>
-    </div>
-  );
-};
+  useLayoutEffect(() => {
+    const handleScroll = () => {
+      if (wait) {
+        if (throttleTimeout === null) {
+          throttleTimeout = setTimeout(callBack, wait);
+        }
+      } else {
+        callBack();
+      }
+    };
 
-export default TopNavbar;
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, deps);
+}

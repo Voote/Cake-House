@@ -52,6 +52,10 @@ a {
     width: 100%;
   }
   &__bio {
-    padding-bottom: 50vh;
+    padding-bottom: 40vh;
+  }
+  &__navbar {
+    position: sticky;
+    top: 0;
   }
 }
