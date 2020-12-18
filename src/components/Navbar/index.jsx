@@ -1,19 +1,25 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
+import labels from '../../assets/labels';
 
 const TopNavbar = () => {
-  const skrolowanko = (pozycja) => {
-    console.log('Pzycja osi Y:', pozycja);
-    window.scrollTo(0, pozycja);
+  const srollPage = (givenPosition) => {
+    window.scrollTo(0, givenPosition);
   };
 
-  const position = document.body.getBoundingClientRect();
+  const position = document.body;
 
   return (
     <div className="position__navbar">
-      <Button>offer</Button>
-      <Button onClick={() => skrolowanko(position.top)}>home</Button>
-      <Button onClick={() => skrolowanko(position.bottom)}>contact</Button>
+      <div className="position__navbar--buttons background__navbar">
+        <Button>{labels.navbarOffer}</Button>
+        <Button onClick={() => srollPage(position.offsetTop)}>
+          {labels.navbarHome}
+        </Button>
+        <Button onClick={() => srollPage(position.scrollHeight)}>
+          {labels.navbarContact}
+        </Button>
+      </div>
     </div>
   );
 };
