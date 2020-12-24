@@ -1,6 +1,8 @@
 import React from 'react';
 import labels from '../../assets/labels';
 
+import ToggleLanguage from '../../components/toggle';
+
 const AboutMe = () => (
   <div className="component">
     <div className="position__bio">
@@ -16,6 +18,9 @@ const AboutMe = () => (
           alt="happy family cooking"
           className="image__bio"
         />
+      </div>
+      <div className="position__toggle">
+        <ToggleLanguage />
       </div>
     </div>
   </div>
