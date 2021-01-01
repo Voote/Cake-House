@@ -1,6 +1,8 @@
 $pink: #e12160;
 $white: #e1e2e3;
 $black: #1f1e1d;
+$illuminating: #f3df4d;
+$ultimateGray: #96999c;
 
 $bgGradient: linear-gradient(to right, $white, $pink);
 $bgReverseGradient: linear-gradient(to top left, $white, $pink);
@@ -35,6 +37,11 @@ a {
     width: 100%;
     border: 1px solid black;
   }
+  &__logo {
+    object-fit: contain;
+    width: 100%;
+    padding: 4rem 4rem 2rem 4rem;
+  }
 }
 
 .label {
@@ -52,12 +59,29 @@ a {
     background: $bgReverseGradient;
     box-shadow: 4px 10px 27px white;
   }
+  &__signature {
+    border-top: 2px $illuminating solid;
+    background: $ultimateGray;
+  }
 }
 
 .position {
   &__footer {
     // width: 100%;
-    min-height: 50vh;
+    // min-height: 50vh;
+    &--contact {
+      padding: 2vh 20vw 7vh 20vw;
+      h3 {
+        text-align: center;
+      }
+    }
+    &--signature {
+      padding: 1px 1rem;
+      color: $illuminating;
+      h4 {
+        text-align: center;
+      }
+    }
   }
   &__bio {
     padding-bottom: 1vh;
@@ -80,5 +104,11 @@ a {
   &__toggle {
     display: flex;
     justify-content: flex-end;
+  }
+  &__scroll-up {
+    display: flex;
+    justify-content: flex-end;
+    // position: absolute;
+    // bottom: 1rem;
   }
 }
