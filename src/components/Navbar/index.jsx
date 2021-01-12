@@ -2,6 +2,8 @@ import React from 'react';
 import { Button } from '@material-ui/core';
 import labels from '../../assets/labels';
 
+import ToggleLanguage from '../../components/toggle';
+
 const TopNavbar = () => {
   const srollPage = (givenPosition) => {
     window.scrollTo(0, givenPosition);
@@ -19,6 +21,9 @@ const TopNavbar = () => {
         <Button onClick={() => srollPage(position.scrollHeight)}>
           {labels.navbarContact}
         </Button>
+        <div className="position__toggle">
+          <ToggleLanguage />
+        </div>
       </div>
     </div>
   );

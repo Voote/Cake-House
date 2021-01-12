@@ -1,16 +1,19 @@
-$pink: #e12160;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+$pink: #ffbee0;
 $white: #e1e2e3;
 $black: #1f1e1d;
 $illuminating: #f3df4d;
 $ultimateGray: #96999c;
+$fontColor: #4e4e4e;
 
-$bgGradient: linear-gradient(to right, $white, $pink);
+$bgGradient: linear-gradient(to top right, $black, $pink);
 $bgReverseGradient: linear-gradient(to top left, $white, $pink);
-$footerGradient: linear-gradient(to right, $pink, $black);
+$footerGradient: linear-gradient(to bottom, $pink, $white);
 
 html,
 body {
-  font-family: 'Charmonman', cursive;
+  font-family: 'Lato', sans-serif;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -51,14 +54,23 @@ a {
 }
 
 .background {
+  &__home {
+    // background-image: url('/IMG/cooking_background.jpg');
+    //Nie dziala ModuleScopePlugin: eject or remove using "react-app-rewired"
+    //Po co ingerowac w node_modules?
+  }
+
   &__footer {
     background: $footerGradient;
-    color: $white;
+    color: $fontColor;
   }
+
   &__navbar {
-    background: $bgReverseGradient;
+    background: $pink;
     box-shadow: 4px 10px 27px white;
+    border-radius: 0 0 20px 20px;
   }
+
   &__signature {
     border-top: 2px $illuminating solid;
     background: $ultimateGray;
@@ -67,8 +79,6 @@ a {
 
 .position {
   &__footer {
-    // width: 100%;
-    // min-height: 50vh;
     &--contact {
       padding: 2vh 20vw 7vh 20vw;
       h3 {
@@ -103,7 +113,11 @@ a {
 
   &__toggle {
     display: flex;
-    justify-content: flex-end;
+    position: absolute;
+    right: 1vw;
+    .MuiToggleButton-root {
+      padding: 4px;
+    }
   }
   &__scroll-up {
     display: flex;

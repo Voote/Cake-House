@@ -1,14 +1,19 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
+const font = "'Lato', sans-serif";
+
 export const theme = createMuiTheme({
+  typography: {
+    fontFamily: font
+  },
+  //check it, please
+
   palette: {
     primary: {
-      main: '#03a9f4',
-      contrastText: '#fff'
+      main: '#ffbee0'
     },
     secondary: {
-      main: '#f50057',
-      contrastText: '#000'
+      main: '#4e4e4e'
     }
   }
 });

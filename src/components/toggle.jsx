@@ -15,7 +15,7 @@ const ToggleLanguage = () => {
       exclusive
       onChange={handleAlignment}
       aria-label="text alignment"
-      // style={{ color: 'gray' }}
+      // style={{ color: 'grey' }}
     >
       <ToggleButton value="ENG" aria-label="English">
         ENG

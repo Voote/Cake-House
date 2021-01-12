@@ -22,3 +22,5 @@ const PrivacyPolicy = () => (
 );
 
 export default PrivacyPolicy;
+
+// !! JEST MI WSTYD !!

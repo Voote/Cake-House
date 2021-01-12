@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => (
   <div>
     <img
-      src="./IMG/field_sky.jpg"
+      src="./IMG/Title.jpg"
       alt="horizontal sky img"
       className="image__top"
     />

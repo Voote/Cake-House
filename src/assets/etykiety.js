@@ -6,6 +6,7 @@ module.exports = {
   navbarHome: 'dom',
   navbarContact: 'kontact',
   contactNumber: 'Numer Telefonu: 512 345 678',
+  contactMobileNumber: '+44 789 123 4567',
   contactEmail: 'E-mail: Kasia@CakeHouse.pl',
   contactAdress: 'Adres: Lomza 18-402 ul. Glowna 7'
 };
