@@ -9,7 +9,3 @@
 #### scroll-up button na dole ekranu (privacy-policy -> index.jsx)
 
 ####
-
-####
-
-####
