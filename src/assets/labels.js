@@ -7,6 +7,8 @@ module.exports = {
   navbarContact: 'contact',
   contactNumber: 'Mobile Number: ',
   contactMobileNumber: '+44 789 123 4567',
-  contactEmail: 'E-mail: Kasia@CakeHouse.co.uk',
-  contactAdress: 'Adress: 72 Crown Street, NW2 7UP, London'
+  contactEmail: 'E-mail:',
+  contactEmailAdress: 'Kasia@CakeHouse.co.uk',
+  contactAdress: 'Adress: 72 Crown Street,',
+  contactAdress2: 'NW2 7UP, London'
 };

@@ -19,8 +19,16 @@ const Contact = ({ PL }) => {
             <br />
             {label.contactMobileNumber}
           </h3>
-          <h3>{label.contactEmail}</h3>
-          <h3>{label.contactAdress}</h3>
+          <h3>
+            {label.contactEmail}
+            <br />
+            {label.contactEmailAdress}
+          </h3>
+          <h3>
+            {label.contactAdress}
+            <br />
+            {label.contactAdress2}
+          </h3>
         </div>
         <div className="background__signature">
           <PrivacyPolicy />
