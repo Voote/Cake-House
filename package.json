@@ -44,6 +44,6 @@
     "prettier": "2.2.1"
   },
   "engines": {
-    "node": "v12.14.1"
+    "node": "v12.14.x"
   }
 }
