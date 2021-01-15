@@ -6,14 +6,16 @@ import PrivacyPolicy from './privacy-policy';
 const Contact = ({ PL }) => {
   const label = PL ? labels : etykiety;
   return (
+    // <div className="background__footer--pattern">
     <div>
       <div className="background__footer position__footer">
         <img
-          src="./IMG/placeholder_book.png"
-          alt="blue book icon"
-          className="image__logo"
+          src="./IMG/line_white_long.png"
+          alt="white long line"
+          className="image__long-line"
         />
-        <div className="position__footer--contact">
+        <div className="position__footer--contact" style={{ color: 'white' }}>
+          <h2 style={{ textAlign: 'center' }}>Naglowek</h2>
           <h3>
             {label.contactNumber}
             <br />
@@ -30,6 +32,11 @@ const Contact = ({ PL }) => {
             {label.contactAdress2}
           </h3>
         </div>
+        <img
+          src="./IMG/line_white_long.png"
+          alt="white long line"
+          className="image__line"
+        />
         <div className="background__signature">
           <PrivacyPolicy />
         </div>
