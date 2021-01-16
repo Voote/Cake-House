@@ -4,7 +4,7 @@ import etykiety from '../../assets/etykiety';
 import PrivacyPolicy from './privacy-policy';
 
 const Contact = ({ PL }) => {
-  const label = PL ? labels : etykiety;
+  const label = PL !== true ? labels : etykiety;
   return (
     // <div className="background__footer--pattern">
     <div>
@@ -15,7 +15,7 @@ const Contact = ({ PL }) => {
           className="image__long-line"
         />
         <div className="position__footer--contact" style={{ color: 'white' }}>
-          <h2 style={{ textAlign: 'center' }}>Naglowek</h2>
+          <h2 style={{ textAlign: 'center' }}>Contact</h2>
           <h3>
             {label.contactNumber}
             <br />
