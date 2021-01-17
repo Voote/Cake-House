@@ -1,7 +1,9 @@
 module.exports = {
-  bioHeader: 'Hello my name is Kasia and I bake cakes',
+  bioHeader: 'My name is Kasia & I bake cakes',
   bioAboutMe:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Tempus urna et pharetra pharetra massa massa ultricies mi quis. Vulputate enim nulla aliquet porttitor lacus luctus.',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus urna et pharetra pharetra massa massa ultricies mi quis.',
+  bioAboutMe2:
+    'Arcu dui vivamus arcu felis. Et malesuada fames ac turpis egestas integer. Nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus. Sed elementum tempus egestas sed sed risus.',
   navbarOffer: 'offer',
   navbarHome: 'home',
   navbarContact: 'contact',

@@ -43,18 +43,29 @@ a {
   &__line {
     object-fit: contain;
     width: 100%;
-    padding: 2rem 4rem;
+    padding: 1rem 4rem 4rem 4rem;
   }
   &__long-line {
     object-fit: contain;
     width: 100%;
     padding: 2vh 4vh 0vh 4vh;
   }
+  &__long {
+    object-fit: contain;
+    width: 100%;
+    padding: 0vh 2vh;
+  }
 }
 
 .label {
   &__header {
     text-align: center;
+  }
+  &__home {
+    h4 {
+      margin: 0rem 2rem;
+      text-align: center;
+    }
   }
 }
 
@@ -66,13 +77,12 @@ a {
   }
 
   &__footer {
-    background: $footerGradient;
+    background-image: url('./IMG/contact\ background.jpg');
+    background-size: cover;
     color: $fontColor;
-    &--pattern {
-      background-image: url('./IMG/pattern_diagonal.png');
-      background-repeat: repeat;
-      background-attachment: fixed;
-    }
+    // &--pattern {
+    //   background-image: url('./IMG/pattern_diagonal.png');
+    // }
   }
 
   &__navbar {
@@ -105,9 +115,6 @@ a {
   }
   &__bio {
     padding-bottom: 1vh;
-    p {
-      text-align: justify;
-    }
   }
   &__navbar {
     position: sticky;
