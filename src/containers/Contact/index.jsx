@@ -3,11 +3,11 @@ import labels from '../../assets/labels';
 import etykiety from '../../assets/etykiety';
 import PrivacyPolicy from './privacy-policy';
 
-const Contact = ({ PL }) => {
-  const label = PL !== true ? labels : etykiety;
+const Contact = ({ language }) => {
+  const label = language === 'ENG' ? labels : etykiety;
   return (
     // <div className="background__footer--pattern">
-    <div>
+    <footer>
       <div className="background__footer position__footer">
         <img
           src="./IMG/line_white_long.png"
@@ -41,7 +41,7 @@ const Contact = ({ PL }) => {
           <PrivacyPolicy />
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

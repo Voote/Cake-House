@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Header = () => (
-  <div>
+  <header>
     <img
       src="./IMG/Title.jpg"
       alt="horizontal sky img"
       className="image__top"
     />
-  </div>
+  </header>
 );
 
 export default Header;

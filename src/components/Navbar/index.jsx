@@ -4,10 +4,11 @@ import labels from '../../assets/labels';
 
 import ToggleLanguage from '../../components/toggle';
 
-const TopNavbar = () => {
+const TopNavbar = ({ languageSelector }) => {
   const srollPage = (givenPosition) => {
     window.scrollTo(0, givenPosition);
   };
+  const selectLanguage = (languageCode) => languageSelector(languageCode);
 
   const position = document.body;
 
@@ -22,7 +23,7 @@ const TopNavbar = () => {
           {labels.navbarContact}
         </Button>
         <div className="position__toggle">
-          <ToggleLanguage />
+          <ToggleLanguage selectLanguage={selectLanguage} />
         </div>
       </div>
     </div>
