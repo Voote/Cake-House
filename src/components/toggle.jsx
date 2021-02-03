@@ -1,21 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 
-const ToggleLanguage = ({ selectLanguage }) => {
-  const [alignment, setAlignment] = useState('ENG');
-
-  // React.useEffect(() => {
-  //   setAlignment(newAlignment);
-  // }, []);
+const ToggleLanguage = ({ selectLanguage, language }) => {
   const handleAlignment = (event, newAlignment) => {
-    setAlignment(newAlignment);
-    selectLanguage(alignment);
+    selectLanguage(newAlignment);
   };
 
   return (
     <ToggleButtonGroup
-      value={alignment}
+      value={language}
       exclusive
       onChange={handleAlignment}
       aria-label="text alignment"
