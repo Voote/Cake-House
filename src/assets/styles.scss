@@ -79,6 +79,7 @@ a {
     background-image: url('./IMG/contact\ background.jpg');
     background-size: cover;
     color: $fontColor;
+    height: 80vh;
     // &--pattern {
     //   background-image: url('./IMG/pattern_diagonal.png');
     // }
@@ -130,9 +131,9 @@ a {
   &__toggle {
     display: flex;
     position: absolute;
-    right: 3vw;
+    left: 3vw;
     .MuiToggleButton-root {
-      padding: 4px;
+      padding: 5px;
     }
   }
   &__scroll-up {
