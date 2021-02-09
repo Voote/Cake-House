@@ -7,7 +7,7 @@ const Contact = ({ language }) => {
   return (
     // <div className="background__footer--pattern">
     <footer>
-      <div className="background__footer position__footer">
+      <div className="background__footer position__footer component__section">
         <img
           src="./IMG/line_white_long.png"
           alt="white long line"

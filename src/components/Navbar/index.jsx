@@ -4,6 +4,7 @@ import labels from '../../assets/labels';
 import etykiety from '../../assets/etykiety';
 
 import ToggleLanguage from '../../components/toggle';
+import DarkThemeToggle from '../darkToggle';
 
 const TopNavbar = ({ languageSelector, language }) => {
   const label = language === 'ENG' ? labels : etykiety;
@@ -15,7 +16,10 @@ const TopNavbar = ({ languageSelector, language }) => {
 
   return (
     <div className="position__navbar">
-      <div className="position__navbar--buttons background__navbar">
+      <div className="position__navbar--buttons background__navbar label__navbar">
+        <div className="position__toggle">
+          <ToggleLanguage selectLanguage={selectLanguage} language={language} />
+        </div>
         <Button>{label.navbarOffer}</Button>
         <Button onClick={() => srollPage(websitePosition.offsetTop)}>
           {label.navbarHome}
@@ -23,8 +27,8 @@ const TopNavbar = ({ languageSelector, language }) => {
         <Button onClick={() => srollPage(websitePosition.scrollHeight)}>
           {label.navbarContact}
         </Button>
-        <div className="position__toggle">
-          <ToggleLanguage selectLanguage={selectLanguage} language={language} />
+        <div className="position__toggle--dark-mode">
+          <DarkThemeToggle />
         </div>
       </div>
     </div>
