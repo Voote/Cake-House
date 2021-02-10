@@ -11,6 +11,9 @@
 # production
 /build
 
+# #heroku
+# /cake-house010
+
 # misc
 .DS_Store
 .env.local

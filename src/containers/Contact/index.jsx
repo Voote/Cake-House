@@ -5,7 +5,6 @@ import etykiety from '../../assets/etykiety';
 const Contact = ({ language }) => {
   const label = language === 'ENG' ? labels : etykiety;
   return (
-    // <div className="background__footer--pattern">
     <footer>
       <div className="background__footer position__footer component__section">
         <img

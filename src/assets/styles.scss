@@ -8,9 +8,6 @@ $ultimateGray: #96999c;
 $fontColor: #4e4e4e;
 $greyToggle: #424242;
 
-$bgReverseGradient: linear-gradient(to top left, $white, $pink);
-$footerGradient: linear-gradient(to bottom, $pink, $white);
-
 html,
 body {
   font-family: 'Lato', sans-serif;
@@ -91,9 +88,6 @@ a {
     background-size: cover;
     color: $fontColor;
     height: 80vh;
-    // &--pattern {
-    //   background-image: url('./IMG/pattern_diagonal.png');
-    // }
   }
 
   &__navbar {
@@ -124,9 +118,11 @@ a {
       }
     }
   }
+
   &__bio {
     padding-bottom: 1vh;
   }
+
   &__navbar {
     position: sticky;
     top: 0;
@@ -135,6 +131,7 @@ a {
       justify-content: center;
     }
   }
+
   &__header {
     text-align: center;
   }
@@ -154,13 +151,6 @@ a {
       right: 0.5vw;
     }
   }
-
-  &__scroll-up {
-    display: flex;
-    justify-content: flex-end;
-    // position: absolute;
-    // bottom: 1rem;
-  }
 }
 
 @media (min-width: 36rem) {
@@ -168,7 +158,6 @@ a {
     &__navbar {
       .MuiButton-label {
         font-size: 14pt;
-        // font-weight: 600;
         margin: 0vh 1.4vw;
       }
     }
