@@ -1,9 +1,9 @@
 import React from 'react';
-import labels from '../../assets/labels';
-import etykiety from '../../assets/etykiety';
+import labelsENG from '../../assets/labelsENG';
+import labelsPL from '../../assets/labelsPL';
 
 const AboutMe = ({ language }) => {
-  const label = language === 'ENG' ? labels : etykiety;
+  const label = language === labelsENG.eng ? labelsENG : labelsPL;
   return (
     <main>
       <div className="component__section background__home">

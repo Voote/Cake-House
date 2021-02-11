@@ -5,7 +5,7 @@ import Switch from '@material-ui/core/Switch';
 
 const DarkThemeToggle = () => {
   const [toggleState, setToggleState] = useState(true);
-  const handleChange = (event) => {
+  const handleChange = () => {
     setToggleState(!toggleState);
   };
 

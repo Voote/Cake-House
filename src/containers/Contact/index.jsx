@@ -1,9 +1,9 @@
 import React from 'react';
-import labels from '../../assets/labels';
-import etykiety from '../../assets/etykiety';
+import labelsENG from '../../assets/labelsENG';
+import labelsPL from '../../assets/labelsPL';
 
 const Contact = ({ language }) => {
-  const label = language === 'ENG' ? labels : etykiety;
+  const label = language === labelsENG.eng ? labelsENG : labelsPL;
   return (
     <footer>
       <div className="background__footer position__footer component__section">
@@ -12,8 +12,8 @@ const Contact = ({ language }) => {
           alt="white long line"
           className="image__long-line"
         />
-        <div className="position__footer--contact" style={{ color: 'white' }}>
-          <h2 style={{ textAlign: 'center' }}>{label.contactHeader}</h2>
+        <div className="position__footer--contact label__contact">
+          <h2>{label.contactHeader}</h2>
           <h3>
             {label.contactNumber}
             <br />

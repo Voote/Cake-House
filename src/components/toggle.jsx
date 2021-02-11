@@ -1,6 +1,7 @@
 import React from 'react';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import labelsENG from '../assets/labelsENG';
 
 const ToggleLanguage = ({ selectLanguage, language }) => {
   const handleAlignment = (event, newAlignment) => {
@@ -15,10 +16,10 @@ const ToggleLanguage = ({ selectLanguage, language }) => {
       aria-label="text alignment"
     >
       <ToggleButton value="PL" aria-label="Polish">
-        PL
+        {labelsENG.pl}
       </ToggleButton>
       <ToggleButton value="ENG" aria-label="English">
-        ENG
+        {labelsENG.eng}
       </ToggleButton>
     </ToggleButtonGroup>
   );

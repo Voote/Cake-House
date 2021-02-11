@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
-import labels from '../../assets/labels';
-import etykiety from '../../assets/etykiety';
+import labelsENG from '../../assets/labelsENG';
+import labelsPL from '../../assets/labelsPL';
 
 import ToggleLanguage from '../../components/toggle';
 import DarkThemeToggle from '../darkToggle';
 
 const TopNavbar = ({ languageSelector, language }) => {
-  const label = language === 'ENG' ? labels : etykiety;
+  const label = language === labelsENG.eng ? labelsENG : labelsPL;
   const srollPage = (givenPosition) => {
     window.scrollTo(0, givenPosition);
   };

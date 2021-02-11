@@ -13,5 +13,7 @@ module.exports = {
   contactEmail: 'E-mail:',
   contactEmailAdress: 'Kasia@CakeHouse.co.uk',
   contactAdress: 'Adress: 72 Sweet Street,',
-  contactAdress2: 'NW2 7UP, London'
+  contactAdress2: 'NW2 7UP, London',
+  pl: 'PL',
+  eng: 'ENG'
 };

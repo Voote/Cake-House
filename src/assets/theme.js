@@ -6,7 +6,6 @@ export const theme = createMuiTheme({
   typography: {
     fontFamily: font
   },
-  //check it, please
 
   palette: {
     primary: {
