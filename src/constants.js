@@ -3,7 +3,7 @@ export const langCode = {
   eng: 'ENG'
 };
 
-export const themeType = {
+export const themeNames = {
   light: 'themeLight',
   dark: 'themeDark'
 };

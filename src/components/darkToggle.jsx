@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { changeTheme } from '../actions';
-import { themeType } from '../constants';
+import { themeNames } from '../constants';
 
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -11,9 +11,10 @@ const DarkThemeToggle = ({ onThemeChange, themes }) => {
   const [toggleState, setToggleState] = useState(false);
   const handleChange = () => {
     setToggleState(!toggleState);
+
     toggleState !== true
-      ? onThemeChange(themeType.dark)
-      : onThemeChange(themeType.light);
+      ? onThemeChange(themeNames.dark)
+      : onThemeChange(themeNames.light);
   };
 
   return (
@@ -40,7 +41,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 DarkThemeToggle.defaultProps = {
-  themes: themeType.light
+  themes: themeNames.light
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DarkThemeToggle);

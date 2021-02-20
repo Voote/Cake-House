@@ -23,7 +23,7 @@ const App = ({ themes }) => (
 );
 
 const mapStateToProps = (state) => ({
-  themes: state.themes.color
+  themes: state.themes.themeMode
 });
 
 export default connect(mapStateToProps)(App);

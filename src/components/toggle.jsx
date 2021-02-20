@@ -16,7 +16,6 @@ const ToggleLanguage = ({ onLanguageChange, languages }) => {
   const getOnLangChange = useMemo(() => {
     onLanguageChange(langCode.eng);
   }, [onLanguageChange]);
-
   useEffect(() => getOnLangChange, [getOnLangChange]);
 
   return (

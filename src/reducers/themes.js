@@ -1,10 +1,10 @@
 import { SET_THEME } from '../actions/actionTypes';
 import { themeDark, themeLight } from '../assets/theme';
-import { themeType } from '../constants';
+import { themeNames } from '../constants';
 
 const initialState = {
   currentTheme: 'themeLight',
-  color: themeLight
+  themeMode: themeLight
 };
 
 const themes = (state = initialState, action) => {
@@ -13,7 +13,7 @@ const themes = (state = initialState, action) => {
       return {
         ...state,
         currentTheme: action.payload,
-        color: action.payload === themeType.light ? themeLight : themeDark
+        themeMode: action.payload === themeNames.light ? themeLight : themeDark
       };
     }
     default:
