@@ -1,32 +1,28 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
-import { langCode } from '../../constants';
-import labelsENG from '../../assets/labelsENG';
-import labelsPL from '../../assets/labelsPL';
+import { connect } from 'react-redux';
 
+import { Button } from '@material-ui/core';
 import ToggleLanguage from '../../components/toggle';
 import DarkThemeToggle from '../darkToggle';
 
-const TopNavbar = ({ language }) => {
-  const label = language === langCode.eng ? labelsENG : labelsPL;
+const TopNavbar = ({ languages }) => {
   const srollPage = (givenPosition) => {
     window.scrollTo(0, givenPosition);
   };
-  // const selectLanguage = (languageCode) => languageSelector(languageCode);
   const websitePosition = document.body;
 
   return (
     <div className="position__navbar">
       <div className="position__navbar--buttons background__navbar label__navbar">
         <div className="position__toggle">
-          <ToggleLanguage language={language} />
+          <ToggleLanguage />
         </div>
-        <Button>{label.navbarOffer}</Button>
+        <Button>{languages.navbarOffer}</Button>
         <Button onClick={() => srollPage(websitePosition.offsetTop)}>
-          {label.navbarHome}
+          {languages.navbarHome}
         </Button>
         <Button onClick={() => srollPage(websitePosition.scrollHeight)}>
-          {label.navbarContact}
+          {languages.navbarContact}
         </Button>
         <div className="position__toggle--dark-mode">
           <DarkThemeToggle />
@@ -36,4 +32,8 @@ const TopNavbar = ({ language }) => {
   );
 };
 
-export default TopNavbar;
+const mapStateToProps = (state) => ({
+  languages: state.languages.dictionary
+});
+
+export default connect(mapStateToProps)(TopNavbar);

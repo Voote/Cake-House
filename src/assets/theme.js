@@ -27,7 +27,7 @@ export const themeDark = createMuiTheme({
       main: '#40fffc'
     },
     secondary: {
-      main: '#570000'
+      main: '#fffb13'
     }
   }
 });

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { connect } from 'react-redux';
 
 import { changeLanguage } from './../actions/index';
@@ -8,13 +8,16 @@ import { langCode } from './../constants';
 
 const ToggleLanguage = ({ onLanguageChange, languages }) => {
   const handleAlignment = (event, newAlignment) => {
-    onLanguageChange(newAlignment);
+    if (newAlignment != null) {
+      onLanguageChange(newAlignment);
+    }
   };
 
-  useEffect(() => {
+  const getOnLangChange = useMemo(() => {
     onLanguageChange(langCode.eng);
-  }, []);
-  // TODO: dodac useMemo
+  }, [onLanguageChange]);
+
+  useEffect(() => getOnLangChange, [getOnLangChange]);
 
   return (
     <ToggleButtonGroup

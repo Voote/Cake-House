@@ -17,7 +17,7 @@ const App = ({ languages }) => (
     <div>
       <TopNavbar language={languages} />
       <Header />
-      <AboutMe language={languages} />
+      <AboutMe />
       <Contact />
     </div>
   </MuiThemeProvider>

@@ -1,35 +1,41 @@
 import React from 'react';
-import { langCode } from './../../constants';
-import labelsENG from '../../assets/labelsENG';
-import labelsPL from '../../assets/labelsPL';
+import { connect } from 'react-redux';
+import { Button } from '@material-ui/core';
 
-const AboutMe = ({ language }) => {
-  const label = language === langCode.eng ? labelsENG : labelsPL;
-  return (
-    <main>
-      <div className="component__section background__home">
-        <img
-          src="./IMG/line_grey_long.png"
-          alt="white long line"
-          className="image__long"
-        />
-        <div className="position__bio">
-          <div className="position__header">
-            <h2>{label.bioHeader}</h2>
-          </div>
-          <div className="label__home">
-            <h4>{label.bioAboutMe}</h4>
-            <h4>{label.bioAboutMe2}</h4>
-          </div>
+const AboutMe = ({ languages }) => (
+  <main>
+    <div className="component__section background__home">
+      <img
+        src="./IMG/line_grey_long.png"
+        alt="white long line"
+        className="image__long"
+      />
+      <Button variant="contained" color="primary">
+        Primary
+      </Button>
+      <Button variant="contained" color="secondary">
+        Secondary
+      </Button>
+      <div className="position__bio">
+        <div className="position__header">
+          <h2>{languages.bioHeader}</h2>
         </div>
-        <img
-          src="./IMG/line_grey_short.png"
-          alt="white long line"
-          className="image__line"
-        />
+        <div className="label__home">
+          <h4>{languages.bioAboutMe}</h4>
+          <h4>{languages.bioAboutMe2}</h4>
+        </div>
       </div>
-    </main>
-  );
-};
+      <img
+        src="./IMG/line_grey_short.png"
+        alt="white long line"
+        className="image__line"
+      />
+    </div>
+  </main>
+);
 
-export default AboutMe;
+const mapStateToProps = (state) => ({
+  languages: state.languages.dictionary
+});
+
+export default connect(mapStateToProps)(AboutMe);
