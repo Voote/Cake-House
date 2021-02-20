@@ -4,11 +4,11 @@ import labelsENG from '../assets/labelsENG';
 import labelsPL from '../assets/labelsPL';
 
 const initialState = {
-  currentLanguage: 'eng',
-  dictionary: labelsENG
+  currentLanguage: 'eng', //toggelek nazwa light/dark
+  dictionary: labelsENG //zaciagamy theme konkretny
 };
 
-const languages = (state = initialState, action) => {
+const themes = (state = initialState, action) => {
   switch (action.type) {
     case SET_LANGUAGE: {
       return {
@@ -22,4 +22,4 @@ const languages = (state = initialState, action) => {
   }
 };
 
-export default languages;
+export default themes;

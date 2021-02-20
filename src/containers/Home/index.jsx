@@ -1,9 +1,10 @@
 import React from 'react';
+import { langCode } from './../../constants';
 import labelsENG from '../../assets/labelsENG';
 import labelsPL from '../../assets/labelsPL';
 
 const AboutMe = ({ language }) => {
-  const label = language === labelsENG.eng ? labelsENG : labelsPL;
+  const label = language === langCode.eng ? labelsENG : labelsPL;
   return (
     <main>
       <div className="component__section background__home">

@@ -1,28 +1,48 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+
+import { changeLanguage } from './../actions/index';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
-import labelsENG from '../assets/labelsENG';
+import { langCode } from './../constants';
 
-const ToggleLanguage = ({ selectLanguage, language }) => {
+const ToggleLanguage = ({ onLanguageChange, languages }) => {
   const handleAlignment = (event, newAlignment) => {
-    selectLanguage(newAlignment);
+    onLanguageChange(newAlignment);
   };
+
+  useEffect(() => {
+    onLanguageChange(langCode.eng);
+  }, []);
+  // TODO: dodac useMemo
 
   return (
     <ToggleButtonGroup
-      value={language}
+      value={languages}
       exclusive
       onChange={handleAlignment}
       aria-label="text alignment"
     >
-      <ToggleButton value="PL" aria-label="Polish">
-        {labelsENG.pl}
+      <ToggleButton value={langCode.pl} aria-label="Polish">
+        {langCode.pl}
       </ToggleButton>
-      <ToggleButton value="ENG" aria-label="English">
-        {labelsENG.eng}
+      <ToggleButton value={langCode.eng} aria-label="English">
+        {langCode.eng}
       </ToggleButton>
     </ToggleButtonGroup>
   );
 };
 
-export default ToggleLanguage;
+const mapStateToProps = (state) => ({
+  languages: state.languages.currentLanguage
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  onLanguageChange: (language) => dispatch(changeLanguage(language))
+});
+
+ToggleLanguage.defaultProps = {
+  languages: langCode.eng
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ToggleLanguage);

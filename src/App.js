@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 
 import './assets/styles.scss';
 import Header from './components/header';
@@ -6,21 +7,24 @@ import TopNavbar from './components/Navbar';
 import Contact from './containers/Contact';
 import AboutMe from './containers/Home';
 
-const App = () => {
-  const [language, setLanguage] = useState('ENG');
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { themeDark, themeLight } from './assets/theme';
 
-  const languageSelector = (languageCode) => {
-    setLanguage(languageCode || language);
-  };
-
-  return (
+const App = ({ languages }) => (
+  <MuiThemeProvider theme={themeLight}>
+    <CssBaseline />
     <div>
-      <TopNavbar languageSelector={languageSelector} language={language} />
+      <TopNavbar language={languages} />
       <Header />
-      <AboutMe language={language} />
-      <Contact language={language} />
+      <AboutMe language={languages} />
+      <Contact />
     </div>
-  );
-};
+  </MuiThemeProvider>
+);
 
-export default App;
+const mapStateToProps = (state) => ({
+  languages: state.languages.currentLanguage
+});
+
+export default connect(mapStateToProps)(App);

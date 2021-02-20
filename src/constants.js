@@ -1,5 +1,4 @@
-export const statusType = {
-  success: 'success',
-  error: 'error',
-  loading: 'loading'
+export const langCode = {
+  pl: 'PL',
+  eng: 'ENG'
 };
