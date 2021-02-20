@@ -9,13 +9,12 @@ import AboutMe from './containers/Home';
 
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { themeDark, themeLight } from './assets/theme';
 
-const App = ({ languages }) => (
-  <MuiThemeProvider theme={themeLight}>
+const App = ({ themes }) => (
+  <MuiThemeProvider theme={themes}>
     <CssBaseline />
     <div>
-      <TopNavbar language={languages} />
+      <TopNavbar />
       <Header />
       <AboutMe />
       <Contact />
@@ -24,7 +23,7 @@ const App = ({ languages }) => (
 );
 
 const mapStateToProps = (state) => ({
-  languages: state.languages.currentLanguage
+  themes: state.themes.color
 });
 
 export default connect(mapStateToProps)(App);

@@ -1,20 +1,19 @@
-import { SET_LANGUAGE } from './../actions/actionTypes';
-import { langCode } from '../constants';
-import labelsENG from '../assets/labelsENG';
-import labelsPL from '../assets/labelsPL';
+import { SET_THEME } from '../actions/actionTypes';
+import { themeDark, themeLight } from '../assets/theme';
+import { themeType } from '../constants';
 
 const initialState = {
-  currentLanguage: 'eng', //toggelek nazwa light/dark
-  dictionary: labelsENG //zaciagamy theme konkretny
+  currentTheme: 'themeLight',
+  color: themeLight
 };
 
 const themes = (state = initialState, action) => {
   switch (action.type) {
-    case SET_LANGUAGE: {
+    case SET_THEME: {
       return {
         ...state,
-        currentLanguage: action.payload,
-        dictionary: action.payload === langCode.eng ? labelsENG : labelsPL
+        currentTheme: action.payload,
+        color: action.payload === themeType.light ? themeLight : themeDark
       };
     }
     default:

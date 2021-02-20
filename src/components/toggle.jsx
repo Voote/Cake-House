@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo } from 'react';
 import { connect } from 'react-redux';
+import { changeLanguage } from '../actions';
+import { langCode } from '../constants';
 
-import { changeLanguage } from './../actions/index';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
-import { langCode } from './../constants';
 
 const ToggleLanguage = ({ onLanguageChange, languages }) => {
   const handleAlignment = (event, newAlignment) => {
