@@ -1,16 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
-import { MuiThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { theme } from './assets/theme';
-
+import rootReducer from './reducers';
 import App from './App';
 
-ReactDOM.render(
-  <MuiThemeProvider theme={theme}>
-    <CssBaseline />
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+render(
+  <Provider store={store}>
     <App />
-  </MuiThemeProvider>,
+  </Provider>,
   document.getElementById('root')
 );

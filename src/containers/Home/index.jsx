@@ -1,23 +1,41 @@
 import React from 'react';
-import labels from '../../assets/labels';
+import { connect } from 'react-redux';
+import { Button } from '@material-ui/core';
 
-const AboutMe = () => (
-  <div
-    className="component"
-    style={{
-      background: "url('./IMG/cooking_background.jpg') contain",
-      height: '70vh'
-    }} //W style.scss wywala apke, tutaj nie potrafie wyswietlic tego .jpg jako background-image !!HELP!!
-  >
-    <div className="position__bio">
-      <div className="position__header">
-        <h3>{labels.bioHeader}</h3>
+const AboutMe = ({ languages }) => (
+  <main>
+    <div className="component__section background__home">
+      <img
+        src="./IMG/line_grey_long.png"
+        alt="white long line"
+        className="image__long"
+      />
+      <Button variant="contained" color="primary">
+        Primary
+      </Button>
+      <Button variant="contained" color="secondary">
+        Secondary
+      </Button>
+      <div className="position__bio">
+        <div className="position__header">
+          <h2>{languages.bioHeader}</h2>
+        </div>
+        <div className="label__home">
+          <h4>{languages.bioAboutMe}</h4>
+          <h4>{languages.bioAboutMe2}</h4>
+        </div>
       </div>
-      <div>
-        <p>{labels.bioAboutMe} </p>
-      </div>
+      <img
+        src="./IMG/line_grey_short.png"
+        alt="white long line"
+        className="image__line"
+      />
     </div>
-  </div>
+  </main>
 );
 
-export default AboutMe;
+const mapStateToProps = (state) => ({
+  languages: state.languages.dictionary
+});
+
+export default connect(mapStateToProps)(AboutMe);

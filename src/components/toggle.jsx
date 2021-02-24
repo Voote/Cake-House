@@ -1,30 +1,50 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo } from 'react';
+import { connect } from 'react-redux';
+import { changeLanguage } from '../actions';
+import { langCode } from '../constants';
+
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 
-const ToggleLanguage = () => {
-  const [alignment, setAlignment] = useState('ENG');
-
+const ToggleLanguage = ({ onLanguageChange, languages }) => {
   const handleAlignment = (event, newAlignment) => {
-    setAlignment(newAlignment);
+    if (newAlignment != null) {
+      onLanguageChange(newAlignment);
+    }
   };
+
+  const getOnLangChange = useMemo(() => {
+    onLanguageChange(langCode.eng);
+  }, [onLanguageChange]);
+  useEffect(() => getOnLangChange, [getOnLangChange]);
 
   return (
     <ToggleButtonGroup
-      value={alignment}
+      value={languages}
       exclusive
       onChange={handleAlignment}
       aria-label="text alignment"
-      // style={{ color: 'grey' }}
     >
-      <ToggleButton value="ENG" aria-label="English">
-        ENG
+      <ToggleButton value={langCode.pl} aria-label="Polish">
+        {langCode.pl}
       </ToggleButton>
-      <ToggleButton value="PL" aria-label="Polish">
-        PL
+      <ToggleButton value={langCode.eng} aria-label="English">
+        {langCode.eng}
       </ToggleButton>
     </ToggleButtonGroup>
   );
 };
 
-export default ToggleLanguage;
+const mapStateToProps = (state) => ({
+  languages: state.languages.currentLanguage
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  onLanguageChange: (language) => dispatch(changeLanguage(language))
+});
+
+ToggleLanguage.defaultProps = {
+  languages: langCode.eng
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ToggleLanguage);

@@ -1,33 +1,43 @@
 import React from 'react';
-import labels from '../../assets/labels';
-import etykiety from '../../assets/etykiety';
-import PrivacyPolicy from './privacy-policy';
+import { connect } from 'react-redux';
 
-const Contact = ({ PL }) => {
-  const label = PL ? labels : etykiety;
-  return (
-    <div>
-      <div className="background__footer position__footer">
-        <img
-          src="./IMG/placeholder_book.png"
-          alt="blue book icon"
-          className="image__logo"
-        />
-        <div className="position__footer--contact">
-          <h3>
-            {label.contactNumber}
-            <br />
-            {label.contactMobileNumber}
-          </h3>
-          <h3>{label.contactEmail}</h3>
-          <h3>{label.contactAdress}</h3>
-        </div>
-        <div className="background__signature">
-          <PrivacyPolicy />
-        </div>
+const Contact = ({ languages }) => (
+  <footer>
+    <div className="background__footer position__footer component__section">
+      <img
+        src="./IMG/line_white_long.png"
+        alt="white long line"
+        className="image__long-line"
+      />
+      <div className="position__footer--contact label__contact">
+        <h2>{languages.contactHeader}</h2>
+        <h3>
+          {languages.contactNumber}
+          <br />
+          {languages.contactMobileNumber}
+        </h3>
+        <h3>
+          {languages.contactEmail}
+          <br />
+          {languages.contactEmailAdress}
+        </h3>
+        <h3>
+          {languages.contactAdress}
+          <br />
+          {languages.contactAdress2}
+        </h3>
       </div>
+      <img
+        src="./IMG/line_white_long.png"
+        alt="white long line"
+        className="image__line"
+      />
     </div>
-  );
-};
+  </footer>
+);
 
-export default Contact;
+const mapStateToProps = (state) => ({
+  languages: state.languages.dictionary
+});
+
+export default connect(mapStateToProps)(Contact);
