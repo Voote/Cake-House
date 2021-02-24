@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { connect } from 'react-redux';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import './assets/styles.scss';
+import Header from './components/header';
+import TopNavbar from './components/Navbar';
+import Contact from './containers/Contact';
+import AboutMe from './containers/Home';
+
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
+const App = ({ themes }) => (
+  <MuiThemeProvider theme={themes}>
+    <CssBaseline />
+    <div>
+      <TopNavbar />
+      <Header />
+      <AboutMe />
+      <Contact />
     </div>
-  );
-}
+  </MuiThemeProvider>
+);
 
-export default App;
+const mapStateToProps = (state) => ({
+  themes: state.themes.themeMode
+});
+
+export default connect(mapStateToProps)(App);

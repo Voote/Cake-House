@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+$pink: #ffbee0;
+$white: #e1e2e3;
+$black: #1f1e1d;
+$illuminating: #f3df4d;
+$ultimateGray: #96999c;
+$fontColor: #4e4e4e;
+$greyToggle: #424242;
+
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: $pink;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.component {
+  &__section {
+    padding: 1rem;
+  }
+  &__toggle {
+    .MuiSwitch-switchBase.Mui-checked {
+      color: $greyToggle;
+    }
+    .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+      background-color: $greyToggle;
+    }
+  }
+}
+
+.image {
+  margin-top: 1rem;
+  &__top {
+    object-fit: fill;
+    width: 100%;
+  }
+  &__bio {
+    object-fit: contain;
+    width: 100%;
+    border: 1px solid black;
+  }
+  &__line {
+    object-fit: contain;
+    width: 100%;
+    padding: 1rem 4rem 4rem 4rem;
+  }
+  &__long-line {
+    object-fit: contain;
+    width: 100%;
+    padding: 2vh 4vh 0vh 4vh;
+  }
+  &__long {
+    object-fit: contain;
+    width: 100%;
+    padding: 0vh 2vh;
+  }
+}
+
+.label {
+  &__header {
+    text-align: center;
+  }
+  &__home {
+    h4 {
+      margin: 0rem 2rem;
+      text-align: center;
+    }
+  }
+
+  &__contact {
+    color: white;
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+.background {
+  &__home {
+    background-image: url('./IMG/cooking_background.jpg');
+    background-size: cover;
+    height: 64vh;
+  }
+
+  &__footer {
+    background-image: url('./IMG/contact\ background.jpg');
+    background-size: cover;
+    color: $fontColor;
+    height: 80vh;
+  }
+
+  &__navbar {
+    background: $pink;
+    box-shadow: 4px 10px 27px white;
+    border-radius: 0 0 20px 20px;
+  }
+
+  &__signature {
+    border-top: 2px $illuminating solid;
+    background: $ultimateGray;
+  }
+}
+
+.position {
+  &__footer {
+    &--contact {
+      padding: 0vh 20vw;
+      h3 {
+        text-align: center;
+      }
+    }
+    &--signature {
+      padding: 1px 1rem;
+      color: $illuminating;
+      h4 {
+        text-align: center;
+      }
+    }
+  }
+
+  &__bio {
+    padding-bottom: 1vh;
+  }
+
+  &__navbar {
+    position: sticky;
+    top: 0;
+    &--buttons {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__toggle {
+    display: flex;
+    position: absolute;
+    left: 3vw;
+    .MuiToggleButton-root {
+      padding: 6px;
+      border-radius: 0px 0px 7px 7px;
+      border: none;
+    }
+    &--dark-mode {
+      display: flex;
+      position: absolute;
+      right: 0.5vw;
+    }
+  }
+}
+
+@media (min-width: 36rem) {
+  .label {
+    &__navbar {
+      .MuiButton-label {
+        font-size: 14pt;
+        margin: 0vh 1.4vw;
+      }
+    }
+  }
+
+  .position {
+    &__toggle {
+      .MuiToggleButton-label {
+        font-size: 14pt;
+        margin: 0vw 1vw;
+      }
+      &--dark-mode {
+        display: flex;
+        position: absolute;
+        right: 1vw;
+        top: 0.4vh;
+      }
+    }
+  }
+
+  .component {
+    &__section {
+      padding: 4vh 14vw;
+      font-size: 14pt;
+    }
+  }
+}
+@media (min-width: 62rem) {
+  .component {
+    &__section {
+      padding: 8vh 18vw;
+    }
+  }
+}
