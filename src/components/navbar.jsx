@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { Button } from '@material-ui/core';
-import ToggleLanguage from '../../components/toggle';
-import DarkThemeToggle from '../darkToggle';
+import ToggleLanguage from './toggle';
+import DarkThemeToggle from './darkToggle';
+import OfferModal from './../containers/Offer/index';
 
 const TopNavbar = ({ languages }) => {
-  const srollPage = (givenPosition) => {
-    window.scrollTo(0, givenPosition);
-  };
+  const [openModal, setModalOpen] = useState(false);
+  const handleOpenModal = () => setModalOpen(true);
+  const handleCloseModal = () => setModalOpen(false);
+
+  const srollPage = (givenPosition) => window.scrollTo(0, givenPosition);
   const websitePosition = document.body;
 
   return (
     <div className="position__navbar">
+      <OfferModal open={openModal} handleClose={handleCloseModal} />
       <div className="position__navbar--buttons background__navbar label__navbar">
         <div className="position__toggle">
           <ToggleLanguage />
         </div>
-        <Button>{languages.navbarOffer}</Button>
+        <Button onClick={() => handleOpenModal()}>
+          {languages.navbarOffer}
+        </Button>
         <Button onClick={() => srollPage(websitePosition.offsetTop)}>
           {languages.navbarHome}
         </Button>

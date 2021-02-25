@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import './assets/styles.scss';
 import Header from './components/header';
-import TopNavbar from './components/Navbar';
+import TopNavbar from './components/navbar';
 import Contact from './containers/Contact';
 import AboutMe from './containers/Home';
 

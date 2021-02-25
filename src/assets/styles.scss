@@ -8,6 +8,8 @@ $ultimateGray: #96999c;
 $fontColor: #4e4e4e;
 $greyToggle: #424242;
 
+$modalBg: linear-gradient(to top, $white, $pink);
+
 html,
 body {
   font-family: 'Lato', sans-serif;
@@ -51,6 +53,11 @@ a {
     object-fit: contain;
     width: 100%;
     padding: 1rem 4rem 4rem 4rem;
+    &--flat {
+      object-fit: contain;
+      width: 100%;
+      padding: 0rem 3rem 0.5rem 3rem;
+    }
   }
   &__long-line {
     object-fit: contain;
@@ -107,6 +114,10 @@ a {
     border-top: 2px $illuminating solid;
     background: $ultimateGray;
   }
+
+  &__modal {
+    background: $modalBg;
+  }
 }
 
 .position {
@@ -157,6 +168,13 @@ a {
       position: absolute;
       right: 0.5vw;
     }
+  }
+
+  &__modal {
+    margin-top: 62vw;
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
   }
 }
 
