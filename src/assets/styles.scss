@@ -7,6 +7,7 @@ $illuminating: #f3df4d;
 $ultimateGray: #96999c;
 $fontColor: #4e4e4e;
 $greyToggle: #424242;
+$navbarDark: #323232;
 
 $modalBg: linear-gradient(to top, $white, $pink);
 
@@ -75,6 +76,7 @@ a {
   &__header {
     text-align: center;
   }
+
   &__home {
     h4 {
       margin: 0rem 2rem;
@@ -88,13 +90,19 @@ a {
       text-align: center;
     }
   }
+  &__darkTheme {
+    color: $white;
+  }
 }
 
 .background {
   &__home {
     background-image: url('./IMG/cooking_background.jpg');
     background-size: cover;
-    height: 64vh;
+    height: 67vh;
+    &--dark {
+      background-image: url('./IMG/cooking_background_dark.jpg');
+    }
   }
 
   &__footer {
@@ -102,12 +110,32 @@ a {
     background-size: cover;
     color: $fontColor;
     height: 80vh;
+    &--dark {
+      background-image: url('./IMG/contact\ background_dark.jpg');
+    }
   }
 
   &__navbar {
     background: $pink;
     box-shadow: 4px 10px 27px white;
     border-radius: 0 0 20px 20px;
+    &--dark {
+      background: $navbarDark;
+      .MuiButtonBase-root {
+        color: $white;
+      }
+      .MuiToggleButton-root {
+        opacity: 0.5;
+      }
+      .MuiToggleButton-root.Mui-selected {
+        color: $pink;
+        opacity: 0.9;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .MuiSwitch-colorSecondary.Mui-checked {
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
   }
 
   &__signature {
@@ -163,7 +191,7 @@ a {
       border-radius: 0px 0px 7px 7px;
       border: none;
     }
-    &--dark-mode {
+    &--theme {
       display: flex;
       position: absolute;
       right: 0.5vw;
@@ -171,7 +199,7 @@ a {
   }
 
   &__modal {
-    margin-top: 62vw;
+    margin-top: 63vw;
     height: 100%;
     width: 100%;
     border: 2px solid black;
@@ -194,7 +222,7 @@ a {
         font-size: 14pt;
         margin: 0vw 1vw;
       }
-      &--dark-mode {
+      &--theme {
         display: flex;
         position: absolute;
         right: 1vw;
