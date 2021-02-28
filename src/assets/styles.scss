@@ -216,6 +216,31 @@ a {
     }
   }
 
+  .component {
+    &__section {
+      padding: 4vh 14vw;
+      font-size: 14pt;
+    }
+  }
+
+  // .background {
+  //   &__home {
+  //     object-fit: fill;
+  //     height: max-content;
+  //     &--dark {
+  //       background-image: url('./IMG/cooking_background_dark.jpg');
+  //     }
+  //   }
+
+  //   &__footer {
+  //     background-image: url('./IMG/contact\ background_big.jpg');
+  //     height: 92vh;
+  //     &--dark {
+  //       background-image: url('./IMG/contact\ background_dark.jpg');
+  //     }
+  //   }
+  // }
+
   .position {
     &__toggle {
       .MuiToggleButton-label {
@@ -230,18 +255,29 @@ a {
       }
     }
   }
-
-  .component {
-    &__section {
-      padding: 4vh 14vw;
-      font-size: 14pt;
-    }
-  }
 }
 @media (min-width: 62rem) {
   .component {
     &__section {
       padding: 8vh 18vw;
+    }
+  }
+
+  .background {
+    &__home {
+      background-image: url('./IMG/cooking_background_big.jpg');
+      height: 85vh;
+      &--dark {
+        background-image: url('./IMG/cooking_background_dark.jpg');
+      }
+    }
+
+    &__footer {
+      background-image: url('./IMG/contact\ background_big.jpg');
+      height: 92vh;
+      &--dark {
+        background-image: url('./IMG/contact\ background_dark.jpg');
+      }
     }
   }
 }

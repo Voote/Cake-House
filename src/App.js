@@ -1,14 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import './assets/styles.scss';
 import Header from './components/header';
 import TopNavbar from './components/navbar';
 import Contact from './containers/Contact';
 import AboutMe from './containers/Home';
-
-import { MuiThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 
 const App = ({ themes }) => (
   <MuiThemeProvider theme={themes}>
