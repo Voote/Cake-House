@@ -29,14 +29,12 @@ const TopNavbar = ({ languages, themes }) => {
           <div className="position__toggle">
             <ToggleLanguage />
           </div>
-          <Button onClick={() => handleOpenModal()}>
-            {languages.navbarOffer}
-          </Button>
+          <Button onClick={() => handleOpenModal()}>{languages.offer}</Button>
           <Button onClick={() => srollPage(websitePosition.offsetTop)}>
             {languages.navbarHome}
           </Button>
           <Button onClick={() => srollPage(websitePosition.scrollHeight)}>
-            {languages.navbarContact}
+            {languages.contact}
           </Button>
           <div className="position__toggle--theme">
             <DarkThemeToggle />
