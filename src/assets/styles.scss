@@ -230,7 +230,7 @@ a {
   }
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 36rem) /*576px*/ {
   .label {
     &__navbar {
       .MuiButton-label {
@@ -242,8 +242,20 @@ a {
 
   .component {
     &__section {
-      padding: 4vh 14vw;
+      padding: 4vw 14vw;
       font-size: 14pt;
+    }
+  }
+
+  .image {
+    &__line {
+      padding: 0rem 12vw;
+    }
+    &__long-line {
+      padding: 2vh 10vw;
+    }
+    &__long {
+      padding: 0vh 10vw;
     }
   }
 
@@ -280,17 +292,33 @@ a {
     }
   }
 }
-@media (min-width: 62rem) {
+@media (min-width: 62rem) /*992px*/ {
   .component {
     &__section {
       padding: 8vh 18vw;
     }
   }
 
+  .image {
+    &__line {
+      padding: 0rem 18vw;
+      margin-top: 2vh;
+    }
+    &__long-line {
+      padding: 2vh 17vw;
+    }
+    &__long {
+      padding: 0vh 17vw;
+    }
+  }
+
   .background {
     &__home {
+      //check on screen
       background-image: url('./IMG/cooking_background_big.jpg');
-      height: 85vh;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 43.2vw;
       &--dark {
         background-image: url('./IMG/cooking_background_dark.jpg');
       }
@@ -298,7 +326,9 @@ a {
 
     &__footer {
       background-image: url('./IMG/contact\ background_big.jpg');
-      height: 92vh;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 47vw;
       &--dark {
         background-image: url('./IMG/contact\ background_dark.jpg');
       }
