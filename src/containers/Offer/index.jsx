@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { Modal } from '@material-ui/core';
 
 import LightOffer from './light-offer';
-import { themeNames } from '../../constants';
 import DarkOffer from './dark-offer';
+import { themeNames } from '../../constants';
 
 const OfferModal = ({ open, handleClose, languages, themes }) => {
   const themePicker =
@@ -16,7 +16,7 @@ const OfferModal = ({ open, handleClose, languages, themes }) => {
 
   return (
     <Modal open={open} onClose={handleClose}>
-      {themePicker}
+      <div>{themePicker}</div>
     </Modal>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DarkOffer = ({ labels }) => (
-  <div className="position__modal background__modal--dark">
+  <main className="position__modal background__modal--dark">
     <header className="label__header">
       <h1>{labels.offer}</h1>
     </header>
@@ -48,7 +48,7 @@ const DarkOffer = ({ labels }) => (
         </p>
       </div>
     </section>
-  </div>
+  </main>
 );
 
 export default DarkOffer;

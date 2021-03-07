@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LightOffer = ({ labels }) => (
-  <div className="position__modal background__modal">
+  <main className="position__modal background__modal">
     <header className="label__header">
       <h1>{labels.offer}</h1>
     </header>
@@ -48,7 +48,7 @@ const LightOffer = ({ labels }) => (
         </p>
       </div>
     </section>
-  </div>
+  </main>
 );
 
 export default LightOffer;

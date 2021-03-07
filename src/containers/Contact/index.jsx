@@ -17,7 +17,9 @@ const Contact = ({ languages, themes }) => {
           className="image__long-line"
         />
         <div className="position__footer--contact label__contact">
-          <h2>{languages.contact}</h2>
+          <header>
+            <h2>{languages.contact}</h2>
+          </header>
           <h3>
             {languages.contactNumber}
             <br />

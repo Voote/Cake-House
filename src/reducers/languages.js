@@ -1,7 +1,7 @@
 import { SET_LANGUAGE } from '../actions/actionTypes';
+import { langCode } from '../constants';
 import labelsENG from '../assets/labelsENG';
 import labelsPL from '../assets/labelsPL';
-import { langCode } from '../constants';
 
 const initialState = {
   currentLanguage: 'eng',

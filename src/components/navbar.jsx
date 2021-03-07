@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-
 import { Button } from '@material-ui/core';
+
 import ToggleLanguage from './toggle';
 import DarkThemeToggle from './darkToggle';
-import OfferModal from './../containers/Offer/index';
 import { themeNames } from '../constants';
+import OfferModal from '../containers/Offer';
 
 const TopNavbar = ({ languages, themes }) => {
   const [openModal, setModalOpen] = useState(false);
@@ -22,10 +22,10 @@ const TopNavbar = ({ languages, themes }) => {
       : 'background__navbar background__navbar--dark';
 
   return (
-    <div className="position__navbar">
+    <nav className="position__navbar">
       <OfferModal open={openModal} handleClose={handleCloseModal} />
       <div className={backgroundTheme}>
-        <nav className="position__navbar--buttons label__navbar">
+        <div className="position__navbar--buttons label__navbar">
           <div className="position__toggle">
             <ToggleLanguage />
           </div>
@@ -39,9 +39,9 @@ const TopNavbar = ({ languages, themes }) => {
           <div className="position__toggle--theme">
             <DarkThemeToggle />
           </div>
-        </nav>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
