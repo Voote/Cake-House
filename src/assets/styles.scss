@@ -106,6 +106,7 @@ a {
   &__home {
     background-image: url('./IMG/cooking_background.jpg');
     background-size: cover;
+    // background-position: bottom; To sprawdzic
     height: 67vh;
     &--dark {
       background-image: url('./IMG/cooking_background_dark.jpg');

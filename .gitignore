@@ -14,6 +14,9 @@
 # #heroku
 /cake-house010
 
+#eslint
+.eslintcache
+
 # misc
 .DS_Store
 .env.local
