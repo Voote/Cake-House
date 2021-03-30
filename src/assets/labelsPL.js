@@ -15,12 +15,12 @@ module.exports = {
   offerHeaderCake: 'Torty klasyczne',
   offer3Layers: '(3 warstwy)',
   offer5Layers: '(5 warstw)',
-  offerClassic1: 'owocowe - £25',
-  offerClassic2: 'czekoladowe - £30',
-  offerClassic3: 'z alkoholem - £35',
+  offerClassic1: 'owocowe - 25zl',
+  offerClassic2: 'czekoladowe - 30zl',
+  offerClassic3: 'z alkoholem - 35zl',
   offerHeaderSpecial: 'Specjalne okazje',
-  offerSpecial1: 'owocowe - £30',
-  offerSpecial2: 'czekoladowe - £35',
-  offerSpecial3: 'z alkoholem - £40',
+  offerSpecial1: 'owocowe - 30zl',
+  offerSpecial2: 'czekoladowe - 35zl',
+  offerSpecial3: 'z alkoholem - 40zl',
   offerRequest: 'Dekoracja do uzgodnienia'
 };
