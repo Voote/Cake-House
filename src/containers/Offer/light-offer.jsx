@@ -2,7 +2,7 @@ import React from 'react';
 
 const LightOffer = ({ labels }) => (
   <main className="position__modal background__modal">
-    <header className="label__header">
+    <header className="position__header">
       <h1>{labels.offer}</h1>
     </header>
     <img

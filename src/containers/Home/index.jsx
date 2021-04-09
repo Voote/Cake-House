@@ -18,7 +18,7 @@ const AboutMe = ({ languages, themes }) => {
   const labelsTheme =
     themes === themeNames.light
       ? 'position__bio'
-      : 'position__bio label__darkTheme';
+      : 'position__bio label__dark-theme';
 
   return (
     <main>

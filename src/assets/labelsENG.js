@@ -23,5 +23,7 @@ module.exports = {
   offerSpecial1: 'fruit - £30',
   offerSpecial2: 'chocolate - £35',
   offerSpecial3: 'with alcohol - £40',
-  offerRequest: 'Contact for special request'
+  offerRequest: 'Contact for special request',
+  footerMore: 'Visit me also here',
+  author: 'Made by Kuba Krzywanski'
 };

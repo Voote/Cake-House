@@ -22,5 +22,7 @@ module.exports = {
   offerSpecial1: 'owocowe - 30zl',
   offerSpecial2: 'czekoladowe - 35zl',
   offerSpecial3: 'z alkoholem - 40zl',
-  offerRequest: 'Dekoracja do uzgodnienia'
+  offerRequest: 'Dekoracja do uzgodnienia',
+  footerMore: 'Jestem tez tutaj',
+  author: 'Made by Kuba Krzywanski'
 };

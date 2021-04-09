@@ -8,6 +8,7 @@ import Header from './components/header';
 import TopNavbar from './components/navbar';
 import Contact from './containers/Contact';
 import AboutMe from './containers/Home';
+import Signature from './containers/Contact/signature';
 
 const App = ({ themes }) => (
   <MuiThemeProvider theme={themes}>
@@ -17,6 +18,7 @@ const App = ({ themes }) => (
       <Header />
       <AboutMe />
       <Contact />
+      <Signature />
     </div>
   </MuiThemeProvider>
 );
