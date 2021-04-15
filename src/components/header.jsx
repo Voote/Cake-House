@@ -1,24 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
+import { imgLocation } from '../constants';
 
-const Zmieniarka = ({ width }) => {
-  if (isWidthUp('sm', width)) {
-    return (
-      <header>
-        <img
-          src="./IMG/header_placeholder.jpg"
-          alt="horizontal sky img"
-          className="image__top"
-        />
-      </header>
-    );
-  }
+const Header = ({ width }) => {
+  const checkImgWidth = isWidthUp('sm', width)
+    ? imgLocation.HeaderBig
+    : imgLocation.header;
 
   return (
     <header>
       <img
-        src="./IMG/Title.jpg"
+        src={checkImgWidth}
         alt="horizontal sky img"
         className="image__top"
       />
@@ -26,8 +19,8 @@ const Zmieniarka = ({ width }) => {
   );
 };
 
-Zmieniarka.propTypes = {
+Header.propTypes = {
   width: PropTypes.oneOf(['lg', 'md', 'sm', 'xl', 'xs']).isRequired
 };
 
-export default withWidth()(Zmieniarka);
+export default withWidth()(Header);

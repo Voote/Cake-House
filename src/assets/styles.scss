@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
 $pink: #ffbee0;
+$antyPink: #002f4a;
 $white: #e1e2e3;
-$black: #1f1e1d;
 $illuminating: #f3df4d;
 $ultimateGray: #96999c;
 $fontColor: #4e4e4e;
 $greyToggle: #424242;
+$darkBg: #323232;
+$darkerBg: #261a1a;
+
+$modalBg: linear-gradient(to top, $white, $pink);
+$darkBgGradient: linear-gradient(to bottom, $darkBg, $darkerBg);
 
 html,
 body {
@@ -38,25 +43,29 @@ a {
 
 .image {
   margin-top: 1rem;
+
   &__top {
     object-fit: fill;
     width: 100%;
   }
-  &__bio {
-    object-fit: contain;
-    width: 100%;
-    border: 1px solid black;
-  }
+
   &__line {
     object-fit: contain;
     width: 100%;
     padding: 1rem 4rem 4rem 4rem;
+    &--flat {
+      object-fit: contain;
+      width: 100%;
+      padding: 0rem 3rem 0.5rem 3rem;
+    }
   }
+
   &__long-line {
     object-fit: contain;
     width: 100%;
     padding: 2vh 4vh 0vh 4vh;
   }
+
   &__long {
     object-fit: contain;
     width: 100%;
@@ -65,9 +74,6 @@ a {
 }
 
 .label {
-  &__header {
-    text-align: center;
-  }
   &__home {
     h4 {
       margin: 0rem 2rem;
@@ -81,31 +87,80 @@ a {
       text-align: center;
     }
   }
+
+  &__dark-theme {
+    color: $white;
+  }
+
+  &__describtion-below {
+    margin-block-start: -1rem;
+    margin-inline-start: 2vw;
+  }
 }
 
 .background {
   &__home {
     background-image: url('./IMG/cooking_background.jpg');
+    background-position-y: bottom;
     background-size: cover;
-    height: 64vh;
+    height: 67vh;
+    &--dark {
+      background-image: url('./IMG/cooking_background_dark.jpg');
+    }
   }
 
   &__footer {
     background-image: url('./IMG/contact\ background.jpg');
+    background-position-y: bottom;
     background-size: cover;
     color: $fontColor;
     height: 80vh;
+    &--dark {
+      background-image: url('./IMG/contact\ background_dark.jpg');
+    }
   }
 
   &__navbar {
     background: $pink;
     box-shadow: 4px 10px 27px white;
     border-radius: 0 0 20px 20px;
+    &--dark {
+      background: $darkBg;
+      .MuiButtonBase-root {
+        color: $white;
+      }
+      .MuiToggleButton-root {
+        opacity: 0.5;
+      }
+      .MuiToggleButton-root.Mui-selected {
+        color: $pink;
+        opacity: 0.9;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .MuiSwitch-track {
+        background-color: #ffbee0;
+      }
+    }
   }
 
   &__signature {
-    border-top: 2px $illuminating solid;
-    background: $ultimateGray;
+    background: $darkBg;
+    color: $white;
+    &--dark {
+      background: $pink;
+      color: $fontColor;
+    }
+    &--icons a:hover {
+      color: $pink;
+    }
+  }
+
+  &__modal {
+    background: $modalBg;
+    &--dark {
+      background: $darkBgGradient;
+      color: $white;
+    }
   }
 }
 
@@ -118,10 +173,10 @@ a {
       }
     }
     &--signature {
-      padding: 1px 1rem;
-      color: $illuminating;
+      font-size: 0.9em;
       h4 {
-        text-align: center;
+        margin-block-start: 0.5em;
+        margin-block-end: 0em;
       }
     }
   }
@@ -152,15 +207,54 @@ a {
       border-radius: 0px 0px 7px 7px;
       border: none;
     }
-    &--dark-mode {
+    &--theme {
       display: flex;
       position: absolute;
       right: 0.5vw;
     }
   }
+
+  &__modal {
+    margin-top: 29vh;
+    height: 71vh;
+    width: 100%;
+    border: 2px solid black;
+    overflow-y: auto;
+    &--first-section {
+      padding-bottom: 1rem;
+    }
+    div {
+      text-align: center;
+    }
+    ul {
+      padding-left: 10rem;
+    }
+  }
+
+  &__signature {
+    display: flex;
+    margin-inline-start: 2vh;
+  }
+
+  &__author {
+    text-align: end;
+    padding-bottom: 0.1em;
+    margin-block-start: 0.5em;
+    margin-inline-end: 1vh;
+    font-weight: 800;
+    color: $pink;
+    &--dark {
+      color: $antyPink;
+    }
+  }
+
+  &__icon {
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+  }
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 36rem) /*576px*/ {
   .label {
     &__navbar {
       .MuiButton-label {
@@ -170,13 +264,50 @@ a {
     }
   }
 
+  .component {
+    &__section {
+      padding: 4vw 14vw;
+      font-size: 14pt;
+    }
+  }
+
+  .image {
+    &__line {
+      padding: 0rem 12vw;
+    }
+    &__long-line {
+      padding: 2vh 10vw;
+    }
+    &__long {
+      padding: 0vh 10vw;
+    }
+  }
+
+  // .background {
+  //   &__home {
+  //     object-fit: fill;
+  //     height: max-content;
+  //     &--dark {
+  //       background-image: url('./IMG/cooking_background_dark.jpg');
+  //     }
+  //   }
+
+  //   &__footer {
+  //     background-image: url('./IMG/contact\ background_big.jpg');
+  //     height: 92vh;
+  //     &--dark {
+  //       background-image: url('./IMG/contact\ background_dark.jpg');
+  //     }
+  //   }
+  // }
+
   .position {
     &__toggle {
       .MuiToggleButton-label {
         font-size: 14pt;
         margin: 0vw 1vw;
       }
-      &--dark-mode {
+      &--theme {
         display: flex;
         position: absolute;
         right: 1vw;
@@ -184,18 +315,48 @@ a {
       }
     }
   }
-
-  .component {
-    &__section {
-      padding: 4vh 14vw;
-      font-size: 14pt;
-    }
-  }
 }
-@media (min-width: 62rem) {
+
+@media (min-width: 62rem) /*992px*/ {
   .component {
     &__section {
       padding: 8vh 18vw;
+    }
+  }
+
+  .image {
+    &__line {
+      padding: 0rem 18vw;
+      margin-top: 2vh;
+    }
+    &__long-line {
+      padding: 2vh 17vw;
+    }
+    &__long {
+      padding: 0vh 17vw;
+    }
+  }
+
+  .background {
+    &__home {
+      //check on screen
+      background-image: url('./IMG/cooking_background_big.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 43.2vw;
+      &--dark {
+        background-image: url('./IMG/cooking_background_dark.jpg');
+      }
+    }
+
+    &__footer {
+      background-image: url('./IMG/contact\ background_big.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 47vw;
+      &--dark {
+        background-image: url('./IMG/contact\ background_dark.jpg');
+      }
     }
   }
 }
