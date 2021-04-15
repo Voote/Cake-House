@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
 $pink: #ffbee0;
+$antyPink: #002f4a;
 $white: #e1e2e3;
 $black: #1f1e1d;
 $illuminating: #f3df4d;
@@ -240,11 +241,11 @@ a {
     text-align: end;
     padding-bottom: 0.1em;
     margin-block-start: 0.5em;
-    margin-inline-end: 2vh;
-    font-weight: 900;
+    margin-inline-end: 1vh;
+    font-weight: 800;
     color: $pink;
     &--dark {
-      color: $black;
+      color: $antyPink;
     }
   }
 

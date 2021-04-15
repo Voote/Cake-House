@@ -7,12 +7,20 @@ const Contact = ({ languages, themes }) => {
     themes === themeNames.light
       ? 'background__footer'
       : 'background__footer background__footer--dark';
+  const longLineTheme =
+    themes === themeNames.light
+      ? './IMG/line_white_long.png'
+      : './IMG/line_pink_long.png';
+  const shortLineTheme =
+    themes === themeNames.light
+      ? './IMG/line_white_long.png'
+      : './IMG/line_pink_short.png';
 
   return (
     <footer className={backgroundImageTheme}>
       <div className="position__footer component__section">
         <img
-          src="./IMG/line_white_long.png"
+          src={longLineTheme}
           alt="white long line"
           className="image__long-line"
         />
@@ -37,7 +45,7 @@ const Contact = ({ languages, themes }) => {
           </h3>
         </div>
         <img
-          src="./IMG/line_white_long.png"
+          src={shortLineTheme}
           alt="white long line"
           className="image__line"
         />
