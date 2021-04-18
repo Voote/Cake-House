@@ -178,6 +178,17 @@ a {
         margin-block-end: 0em;
       }
     }
+    &--links {
+      display: flex;
+      justify-content: space-between;
+    }
+    &--survey {
+      font-weight: 800;
+      color: #db0000;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      margin-right: 1em;
+    }
   }
 
   &__bio {

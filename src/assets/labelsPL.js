@@ -24,5 +24,6 @@ module.exports = {
   offerSpecial3: 'z alkoholem - 40zl',
   offerRequest: 'Dekoracja do uzgodnienia',
   footerMore: 'Jestem tez tutaj',
-  author: 'Made by: krzywanski.jacob@gmail.com'
+  author: 'Made by: krzywanski.jacob@gmail.com',
+  survey: 'Ankieta'
 };

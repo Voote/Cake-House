@@ -6,7 +6,7 @@ import { themeNames } from '../constants';
 import { FormControlLabel, FormGroup, Switch } from '@material-ui/core';
 
 const DarkThemeToggle = ({ onThemeChange }) => {
-  const [toggleState, setToggleState] = useState(true);
+  const [toggleState, setToggleState] = useState(false);
   const handleChange = () => {
     setToggleState(!toggleState);
     toggleState === true

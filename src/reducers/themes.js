@@ -3,8 +3,8 @@ import { themeDark, themeLight } from '../assets/theme';
 import { themeNames } from '../constants';
 
 const initialState = {
-  currentTheme: 'themeLight',
-  themeMode: themeLight
+  currentTheme: 'themeDark',
+  themeMode: themeDark
 };
 
 const themes = (state = initialState, action) => {
@@ -13,7 +13,7 @@ const themes = (state = initialState, action) => {
       return {
         ...state,
         currentTheme: action.payload,
-        themeMode: action.payload === themeNames.light ? themeLight : themeDark
+        themeMode: action.payload === themeNames.dark ? themeLight : themeDark
       };
     }
     default:
