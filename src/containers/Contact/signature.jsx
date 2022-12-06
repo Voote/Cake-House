@@ -29,7 +29,11 @@ const Signature = ({ languages, themes }) => {
           </a>
         </div>
         <div className="position__footer--survey">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJsXRmN05GTe-nevCWoBR9tEsIh2zhAJXWSm-nz4WyjOlFcw/viewform?usp=sf_link">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdJsXRmN05GTe-nevCWoBR9tEsIh2zhAJXWSm-nz4WyjOlFcw/viewform?usp=sf_link"
+          >
             {languages.survey}
           </a>
         </div>

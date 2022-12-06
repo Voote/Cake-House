@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo } from 'react';
 import { connect } from 'react-redux';
 import { ToggleButton, ToggleButtonGroup } from '@material-ui/lab';
-
 import { changeLanguage } from '../actions';
 import { langCode } from '../constants';
 

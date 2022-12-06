@@ -1,11 +1,37 @@
-1. ## CakeHouse onepage for Kasia
+# CakeHouse 
+### Single page mobile application for small bakery
+## Technology: 
+> ReactJS
+>
+> BEM
+>
+> Redux
+>
+> Sass
+>
+> Material UI
+>
+> React Scripts
 
-2. ### Todo
 
-#### Toggle do przelaczania labels na etykiety (polaczyc toggle z contact)
+## Screenshots from mobile view
+![Mobile Dark Eng](IMG/../public/IMG/DarkEng.png)
+![Mobile Light Eng](IMG/../public/IMG/LightEng.png)
+![Mobile Dark Eng Contact](IMG/../public/IMG/DarkEngContact.png)
+![Mobile Dark PL](IMG/../public/IMG/DarkPl.png)
 
-#### background-image (zapisac w style.scss, wykorzystac w home -> index.jsx)
+## Summary
 
-#### scroll-up button na dole ekranu (privacy-policy -> index.jsx)
+#### To run Cakehouse simply download it to your machine and start it with **npm start**
+
+#### Building CakeHouse webapp helped me to understand BEM methodology and usage of Redux. It was challenging to create toggles for language and dark/light theme from scratch.
+
+### Todo
+
+#### Toggle to switch labels to etykiety (connect toggle and contact)
+
+#### background-image (saved in style.scss, use at "home" -> index.jsx)
+
+#### scroll-up button at bottom (privacy-policy -> index.jsx)
 
 ####

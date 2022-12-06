@@ -1,8 +1,10 @@
 module.exports = {
   bioHeader: 'Czesc! Jestem Kasia i pieke ciasta',
-  bioAboutMe:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Tempus urna et pharetra pharetra massa massa ultricies mi quis. Vulputate enim nulla aliquet porttitor lacus luctus.',
-
+  bioAboutMe: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. 
+  Tempus urna et pharetra pharetra massa massa ultricies mi quis. 
+  Vulputate enim nulla aliquet porttitor lacus luctus.`,
   offer: 'Oferta',
   navbarHome: 'start',
   contact: 'Kontakt',
@@ -24,6 +26,6 @@ module.exports = {
   offerSpecial3: 'z alkoholem - 40zl',
   offerRequest: 'Dekoracja do uzgodnienia',
   footerMore: 'Jestem tez tutaj',
-  author: 'Made by: krzywanski.jacob@gmail.com',
+  author: 'Made by: Krzywanski.Jacob@gmail.com',
   survey: 'Ankieta'
 };

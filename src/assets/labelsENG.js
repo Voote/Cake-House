@@ -25,6 +25,6 @@ module.exports = {
   offerSpecial3: 'with alcohol - £40',
   offerRequest: 'Contact for special request',
   footerMore: 'Visit me also here',
-  author: 'Made by: krzywanski.jacob@gmail.com',
+  author: 'Made by: Krzywanski.Jacob@gmail.com',
   survey: 'Survey'
 };

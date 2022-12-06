@@ -6,8 +6,8 @@ import themes from './themes';
 describe('theme reducer', () => {
   it('should handle initial state', () => {
     expect(themes(undefined, {})).toEqual({
-      currentTheme: 'themeLight',
-      themeMode: themeLight
+      currentTheme: 'themeDark',
+      themeMode: themeDark
     });
   });
 
